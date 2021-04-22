@@ -19,6 +19,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
+    MoviesAdapter adapter;
 
     MoviesRepository moviesRepository = new MoviesRepository(RetrofitInstance.getRetrofitInstance().create(Api.class));
 
@@ -27,12 +28,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        setSupportActionBar(binding.toolbar);
+        adapter = new MoviesAdapter();
+        binding.recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        binding.recyclerView.setAdapter(adapter);
+
         moviesRepository.getMovies(new MoviesCallback() {
             @Override
             public void onSuccess(List<Movie> list) {
-                for (Movie movie:list) {
-                    Log.v("onSuccess", movie.title);
-                }
+                adapter.setItems(list);
             }
 
             @Override

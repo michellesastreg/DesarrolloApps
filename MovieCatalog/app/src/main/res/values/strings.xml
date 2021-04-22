@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MovieCatalog</string>
+    <string name="label_pelicula">pelicula</string>
+    <string name="label_titulo">titulo</string>
 </resources>
