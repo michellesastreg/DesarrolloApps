@@ -19,5 +19,6 @@
     <string name="error_empty_field">El campo no puede estar vacío</string>
     <string name="error_invalid_email">Introduce un correo electrónico válido</string>
     <string name="error_password_length">Introduce una contraseña válida</string>
+    <string name="label_gender">Genero</string>
 
 </resources>
