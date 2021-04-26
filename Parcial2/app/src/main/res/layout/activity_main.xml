@@ -12,23 +12,19 @@
     android:paddingEnd="16dp"
     android:paddingBottom="10dp">
 
-    <TextView
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/label_listaLibros"
-        android:textSize="26sp"
-        android:fontFamily="sans-serif-black"
-        android:textColor="@color/black"
-        android:layout_marginBottom="20sp">
-
-    </TextView>
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|enterAlways"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        tools:listitem="@layout/item_book" />
+        tools:listitem="@layout/item_movie" />
 
 
 </LinearLayout>
