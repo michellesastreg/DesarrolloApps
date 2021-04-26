@@ -23,6 +23,8 @@ class BooksViewHolder extends RecyclerView.ViewHolder {
         itemBookBinding.tvTitle.setText("Título: " + model.name);
         itemBookBinding.tvEditorial.setText("Editorial: " + model.publishingHouse);
         itemBookBinding.tvAuthor.setText("Autor: " + model.author);
+        itemBookBinding.tvPages.setText("Páginas: " + String.valueOf(model.pages));
+
     }
 
     public void isBestSeller (Book model){
