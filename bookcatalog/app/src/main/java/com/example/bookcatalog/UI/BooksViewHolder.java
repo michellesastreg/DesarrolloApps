@@ -20,7 +20,7 @@ class BooksViewHolder extends RecyclerView.ViewHolder {
 
     public void decorateWith(Book model) {
         Glide.with(itemView.getContext()).load(model.url).into(itemBookBinding.ivCover);
-        itemBookBinding.tvTitle.setText("Título: " + model.name);
+        itemBookBinding.tvTitle.setText(model.name);
         itemBookBinding.tvEditorial.setText("Editorial: " + model.publishingHouse);
         itemBookBinding.tvAuthor.setText("Autor: " + model.author);
         itemBookBinding.tvPages.setText("Páginas: " + String.valueOf(model.pages));

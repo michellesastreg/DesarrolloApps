@@ -11,9 +11,10 @@
 
     <ImageView
         android:id="@+id/ivCover"
-        android:layout_width="150dp"
-        android:layout_height="200dp"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_prueba"
+        android:layout_marginEnd="20dp"
         android:contentDescription="@string/label_book" />
 
     <LinearLayout
@@ -25,42 +26,42 @@
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:textColor="@color/black"
             android:fontFamily="sans-serif-black"
             android:textSize="18sp"
+            android:layout_marginBottom="5dp"
             android:text="@string/label_title"/>
 
         <TextView
             android:id="@+id/tvAuthor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:textColor="@color/black"
             android:textSize="18sp"
+            android:layout_marginBottom="5dp"
             android:text="@string/label_author"/>
 
         <TextView
             android:id="@+id/tvEditorial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:textColor="@color/black"
             android:textSize="18sp"
+            android:layout_marginBottom="5dp"
             android:text="@string/label_editorial"/>
 
         <TextView
             android:id="@+id/tvPages"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:textColor="@color/black"
+            android:layout_marginBottom="5dp"
             android:textSize="18sp"
             android:text="@string/label_pages"/>
 
         <ImageView
             android:id="@+id/ivBestSeller"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:visibility="invisible"
