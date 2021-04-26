@@ -8,11 +8,7 @@ public class Book {
     public String name;
     public String author;
     public String publishingHouse;
-
-    public Book(int pages) {
-        this.pages = pages;
-    }
-
     public int pages;
+    public boolean bestSeller;
 
 }

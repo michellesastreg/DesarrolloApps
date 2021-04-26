@@ -25,6 +25,7 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull BooksViewHolder holder, int position) {
         holder.decorateWith(items.get(position));
+        holder.isBestSeller(items.get(position));
     }
 
     @Override
@@ -36,5 +37,6 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksViewHolder> {
         this.items = newItems;
         notifyDataSetChanged();
     }
+
 
 }
