@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MovieCatalog: </string>
+    <string name="label_book">Pelicula: </string>
+    <string name="label_title">Título: </string>
+    <string name="label_author">Author: </string>
+    <string name="label_editorial">Editorial:</string>
+    <string name="label_pages">Páginas:</string>
+    <string name="label_listaLibros">Lista de Libros</string>
+</resources>

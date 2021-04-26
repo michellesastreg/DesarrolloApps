@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MovieCatalog: </string>
+    <string name="app_name">Lista de Libros </string>
     <string name="label_book">Pelicula: </string>
     <string name="label_title">Título: </string>
     <string name="label_author">Author: </string>

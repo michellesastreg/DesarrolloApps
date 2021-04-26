@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.bookcatalog.data.Api;
 import com.example.bookcatalog.data.BooksCallback;
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     BooksAdapter adapter;
 
-    BooksRepository moviesRepository = new BooksRepository(RetrofitInstance.getRetrofitInstance().create(Api.class));
+    BooksRepository booksRepository = new BooksRepository(RetrofitInstance.getRetrofitInstance().create(Api.class));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +29,10 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         adapter = new BooksAdapter();
+        binding.recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
         binding.recyclerView.setAdapter(adapter);
 
-        moviesRepository.getMovies(new BooksCallback() {
+        booksRepository.getBooks(new BooksCallback() {
             @Override
             public void onSuccess(List<Book> list) {
                 adapter.setItems(list);
