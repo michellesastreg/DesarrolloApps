@@ -24,7 +24,7 @@
 
         <TextView
             android:id="@+id/tvTitle"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:fontFamily="sans-serif-black"
@@ -34,7 +34,7 @@
 
         <TextView
             android:id="@+id/tvAuthor"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -43,7 +43,7 @@
 
         <TextView
             android:id="@+id/tvEditorial"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -52,7 +52,7 @@
 
         <TextView
             android:id="@+id/tvPages"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:layout_marginBottom="5dp"

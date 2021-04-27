@@ -1,6 +1,5 @@
 package com.example.bookcatalog.domain;
 
-import java.util.List;
 
 public class Book {
 

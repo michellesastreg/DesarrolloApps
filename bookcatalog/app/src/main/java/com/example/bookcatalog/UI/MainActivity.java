@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         adapter = new BooksAdapter();
-        binding.recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
+        binding.recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         binding.recyclerView.setAdapter(adapter);
 
         booksRepository.getBooks(new BooksCallback() {
