@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Wrapper {
+
     private ArrayList<Pokemon> results;
 
     public ArrayList<Pokemon> getResults(){

@@ -1,9 +1,13 @@
 package com.example.pokedex.domain;
 
-public class Pokemon {
+public class PokemonDetail {
 
-    public String name;
-    public String url;
+    private String name;
+    private String base_experience;
+    private int height;
+    private int id;
+    private int weight;
+    private String url;
 
     public String getPokemonId(){
         return url
@@ -16,22 +20,6 @@ public class Pokemon {
                 .replace("https://pokeapi.co/api/v2/pokemon/", "")
                 .replace("/", "");
         return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pokemonId + ".png";
-    }
-
-    public String getName(){
-        return name;
-    }
-
-    public void setName(){
-        this.name = name;
-    }
-
-    public String getUrl(){
-        return name;
-    }
-
-    public void setUrl(){
-        this.name = name;
     }
 
 }

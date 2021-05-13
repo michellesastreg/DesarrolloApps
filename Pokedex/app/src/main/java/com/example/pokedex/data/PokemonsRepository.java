@@ -27,14 +27,8 @@ public class PokemonsRepository {
             @Override
             public void onResponse(Call<Wrapper> call, Response<Wrapper> response) {
                 if (response.isSuccessful()) {
-                    Wrapper wrapper = response.body();
-                    ArrayList<Pokemon> listaPokemon = wrapper.getResults();
+                    callback.onSuccess(response.body().getResults());
 
-                    for (int i = 0; i < listaPokemon.size(); i++){
-                       Pokemon p = listaPokemon.get(i);
-                        Log.i(TAG, "Pokemon: " + p.getName());
-
-                    }
                 } else {
                     callback.onError("Hubo un error!");
                 }

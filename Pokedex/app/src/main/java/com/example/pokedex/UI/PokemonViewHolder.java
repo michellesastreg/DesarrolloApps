@@ -16,6 +16,7 @@ public class PokemonViewHolder extends RecyclerView.ViewHolder {
         itemPokemonBinding = binding;
     }
 
+
     public void decorateWith(Pokemon model) {
         Glide.with(itemView.getContext())
                 .load(model.getImageUrl())

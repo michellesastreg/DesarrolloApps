@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.example.pokedex.R;
 import com.example.pokedex.data.Api;
+import com.example.pokedex.data.PokemonListener;
 import com.example.pokedex.data.PokemonsCallback;
 import com.example.pokedex.data.PokemonsRepository;
 import com.example.pokedex.data.RetrofitInstance;
@@ -34,7 +35,12 @@ public class MainActivity extends AppCompatActivity {
         binding.recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
         binding.recyclerView.setAdapter(adapter);
 
-
+        adapter.listener = new PokemonListener() {
+            @Override
+            public void onPokemonClicked(String id) {
+                Toast.makeText(MainActivity.this, id, Toast.LENGTH_LONG).show();
+            }
+        };
 
 
         pokemonsRepository.getPokemons(new PokemonsCallback() {

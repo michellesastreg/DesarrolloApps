@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.pokedex.data.PokemonListener;
 import com.example.pokedex.databinding.ItemPokemonBinding;
 import com.example.pokedex.domain.Pokemon;
 
@@ -14,6 +15,7 @@ import java.util.List;
 
 public class PokemonAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
     private ArrayList<Pokemon> items = new ArrayList<>();
+    public PokemonListener listener;
 
     @NonNull
     @Override
@@ -24,6 +26,7 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull PokemonViewHolder holder, int position) {
         holder.decorateWith(items.get(position));
+        holder.itemView.setOnClickListener(view -> listener.onPokemonClicked(items.get(position).getPokemonId()));
     }
 
     @Override
