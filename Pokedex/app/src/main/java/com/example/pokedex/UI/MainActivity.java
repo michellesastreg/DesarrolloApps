@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
     PokemonAdapter adapter;
+    String idd;
 
 
 
@@ -41,9 +42,9 @@ public class MainActivity extends AppCompatActivity {
         adapter.listener = new PokemonListener() {
             @Override
             public void onPokemonClicked(String id) {
-                Toast.makeText(MainActivity.this, id, Toast.LENGTH_LONG).show();
+                idd= id;
                 Intent intent = new Intent(MainActivity.this, PokeDetailRepository.class);
-                intent.putExtra("id", id);
+                intent.putExtra("id", idd);
                 startActivity(intent);
                 finish();
             }
