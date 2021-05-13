@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -11,8 +12,9 @@
 
     <ImageView
         android:id="@+id/ivPokemon"
-        android:layout_width="91dp"
-        android:layout_height="134dp" />
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_prueba"/>
 
     <TextView
         android:id="@+id/tvPokemon"
@@ -20,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center"
+        android:text="@string/label_pokemonName"
         android:textColor="@color/cardview_dark_background"
         android:textSize="18sp" />
 

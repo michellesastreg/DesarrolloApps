@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PokemonAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
-    private List<Pokemon> items = new ArrayList<>();
+    private ArrayList<Pokemon> items = new ArrayList<>();
 
     @NonNull
     @Override
@@ -31,7 +31,7 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
         return items.size();
     }
 
-    public void setItems(List<Pokemon> newItems) {
+    public void setItems(ArrayList<Pokemon> newItems) {
         this.items = newItems;
         notifyDataSetChanged();
     }

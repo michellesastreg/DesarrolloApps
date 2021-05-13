@@ -9,6 +9,6 @@ import retrofit2.http.GET;
 
 public interface Api {
 
-    @GET("pokemon/?limit=50")
-    Call<List<Pokemon>> getPokemons();
+    @GET("pokemon")
+    Call<Wrapper> getPokemons();
 }

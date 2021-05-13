@@ -14,12 +14,14 @@ import com.example.pokedex.data.RetrofitInstance;
 import com.example.pokedex.databinding.ActivityMainBinding;
 import com.example.pokedex.domain.Pokemon;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
     PokemonAdapter adapter;
+
 
 
     @Override
@@ -33,9 +35,11 @@ public class MainActivity extends AppCompatActivity {
         binding.recyclerView.setAdapter(adapter);
 
 
+
+
         pokemonsRepository.getPokemons(new PokemonsCallback() {
             @Override
-            public void onSuccess(List<Pokemon> list) {
+            public void onSuccess(ArrayList<Pokemon> list) {
                 adapter.setItems(list);
             }
 

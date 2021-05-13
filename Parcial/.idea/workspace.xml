@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="okh" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:DesarrolloApps" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="097b3aeb-f0d6-4a6d-893d-a9927b6f3a11" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Books/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Books/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieCatalog/app/src/androidTest/java/com/example/bookcatalog/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieCatalog/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieCatalog/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieCatalog/app/src/main/java/com/example/bookcatalog/UI/BooksAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieCatalog/app/src/main/java/com/example/bookcatalog/UI/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieCatalog/app/src/main/java/com/example/bookcatalog/UI/ViewHolder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieCatalog/app/src/main/java/com/example/bookcatalog/data/Api.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieCatalog/app/src/main/java/com/example/bookcatalog/data/BooksCallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieCatalog/app/src/main/java/com/example/bookcatalog/data/BooksRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieCatalog/app/src/main/java/com/example/bookcatalog/data/RetrofitInstance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieCatalog/app/src/main/java/com/example/bookcatalog/domain/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieCatalog/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieCatalog/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieCatalog/app/src/main/res/layout/item_book.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieCatalog/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MovieCatalog/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MovieCatalog/app/src/test/java/com/example/bookcatalog/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/androidTest/java/com/example/moviecatalog/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/java/com/example/moviecatalog/UI/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/java/com/example/moviecatalog/UI/MoviesAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/java/com/example/moviecatalog/UI/ViewHolder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/java/com/example/moviecatalog/data/Api.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/java/com/example/moviecatalog/data/MoviesCallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/java/com/example/moviecatalog/data/MoviesRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/java/com/example/moviecatalog/data/RetrofitInstance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/java/com/example/moviecatalog/domain/Movie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/drawable/ic_prueba.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/layout/item_movie.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/app/src/test/java/com/example/moviecatalog/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Parcial2/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookcatalog/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bookcatalog/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookcatalog/app/src/main/java/com/example/bookcatalog/UI/BooksAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bookcatalog/app/src/main/java/com/example/bookcatalog/UI/BooksAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookcatalog/app/src/main/java/com/example/bookcatalog/UI/BooksViewHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bookcatalog/app/src/main/java/com/example/bookcatalog/UI/BooksViewHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookcatalog/app/src/main/java/com/example/bookcatalog/UI/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bookcatalog/app/src/main/java/com/example/bookcatalog/UI/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookcatalog/app/src/main/java/com/example/bookcatalog/data/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bookcatalog/app/src/main/java/com/example/bookcatalog/data/Api.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookcatalog/app/src/main/java/com/example/bookcatalog/data/BooksCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bookcatalog/app/src/main/java/com/example/bookcatalog/data/BooksCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookcatalog/app/src/main/java/com/example/bookcatalog/data/BooksRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bookcatalog/app/src/main/java/com/example/bookcatalog/data/BooksRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookcatalog/app/src/main/java/com/example/bookcatalog/data/RetrofitInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bookcatalog/app/src/main/java/com/example/bookcatalog/data/RetrofitInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookcatalog/app/src/main/java/com/example/bookcatalog/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bookcatalog/app/src/main/java/com/example/bookcatalog/domain/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookcatalog/app/src/main/res/layout/item_book.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bookcatalog/app/src/main/res/layout/item_book.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bookcatalog/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bookcatalog/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="layoutResourceFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1rVBpgfY6OflkW7RuCLPpiM5Gko" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_4_XL_API_30" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-04-22T03:13:24.820Z" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android-custom-view/Users/michellesastre/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.2.0/13e8ff89631c2e101eb6bddd12c2fb4bbd74b15d/appcompat-1.2.0-sources.jar!/androidx/appcompat/widget/Toolbar.java_SELECTED" value="Toolbar" />
+    <property name="android-custom-view/Users/michellesastre/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
+    <property name="multi-representation-preview/Users/michellesastre/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.2.0/13e8ff89631c2e101eb6bddd12c2fb4bbd74b15d/appcompat-1.2.0-sources.jar!/androidx/appcompat/widget/Toolbar.java_selected" value="Custom views" />
+    <property name="multi-representation-preview/Users/michellesastre/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_selected" value="Custom views" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.moviecatalog.UI" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.moviecatalog.UI" />
+      <recent name="com.example.moviecatalog.data" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="MovieCatalog.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="097b3aeb-f0d6-4a6d-893d-a9927b6f3a11" name="Default Changelist" comment="" />
+      <created>1619051560340</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619051560340</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1214" y="396" key="#Inspections" timestamp="1619059910569">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1214" y="396" key="#Inspections/0.0.2560.1440@0.0.2560.1440" timestamp="1619059910569" />
+    <state x="809" y="427" key="#PSD" timestamp="1619469272063">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="809" y="427" key="#PSD/0.0.2560.1440@0.0.2560.1440" timestamp="1619469272063" />
+    <state x="1541" y="433" key="#com.intellij.ide.util.MemberChooser" timestamp="1619058260249">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1541" y="433" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1619058260249" />
+    <state x="1492" y="586" width="637" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1619052511391">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1492" y="586" width="637" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2560.1440@0.0.2560.1440" timestamp="1619052511391" />
+    <state x="836" y="164" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1619469409292">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="836" y="164" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1619469409292" />
+    <state x="1276" y="268" key="AndroidCreateResourceFileDialog" timestamp="1619059159028">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1276" y="268" key="AndroidCreateResourceFileDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1619059159028" />
+    <state x="1402" y="495" key="AndroidCreateXmlResourceDialog" timestamp="1619470593582">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1402" y="495" key="AndroidCreateXmlResourceDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1619470593582" />
+    <state width="1730" height="575" key="GridCell.Tab.0.bottom" timestamp="1619470271096">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1730" height="575" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1619470271096" />
+    <state width="1730" height="575" key="GridCell.Tab.0.center" timestamp="1619470271096">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1730" height="575" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1619470271096" />
+    <state width="1730" height="575" key="GridCell.Tab.0.left" timestamp="1619470271095">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1730" height="575" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1619470271095" />
+    <state width="1730" height="575" key="GridCell.Tab.0.right" timestamp="1619470271096">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1730" height="575" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1619470271096" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/bookcatalog/UI/BooksAdapter.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

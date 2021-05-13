@@ -1,9 +1,10 @@
 package com.example.moviecatalog.UI;
 
+import android.graphics.Movie;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.moviecatalog.domain.Movie;
 
 class MoviesViewHolder extends RecyclerView.ViewHolder {
 
@@ -14,8 +15,4 @@ class MoviesViewHolder extends RecyclerView.ViewHolder {
         itemMovieBinding = binding;
     }
 
-    public void decorateWith(Movie model) {
-        Glide.with(itemView.getContext()).load(model.poster).into(itemMovieBinding.ivPoster);
-        itemMovieBinding.title.setText(model.title);
     }
-}

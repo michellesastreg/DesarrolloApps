@@ -1,7 +1,14 @@
 package com.example.pokedex.data;
 
+import com.example.pokedex.domain.Pokemon;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -20,7 +27,13 @@ public class RetrofitInstance {
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(builder.build())
                     .build();
+            getData();
         }
         return retrofit;
+    }
+
+    private static void getData() {
+            Api service = retrofit.create(Api.class);
+            Call<Wrapper> wrapperCall = service.getPokemons();
     }
 }

@@ -1,0 +1,390 @@
+						
+
+
+				PARCIAL 2 Michelle Sastre
+
+
+/////////////////////////String /////////////////////////
+
+
+<resources>
+    <string name="app_name">bookcatalog</string>
+    <string name="label_book">Pelicula: %s</string>
+    <string name="label_title">Título: %s </string>
+    <string name="label_author">Autor: %s</string>
+    <string name="label_editorial">Editorial: %s</string>
+    <string name="label_pages">Páginas: %d</string>
+    <string name="label_listaLibros">Lista de Libros</string>
+</resources>
+
+
+/////////////////////////Themes /////////////////////////
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BookCatalog" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
+
+
+/////////////////////////Retrofit Instance /////////////////////////
+
+package com.example.bookcatalog.data;
+
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+public class RetrofitInstance {
+
+    private static Retrofit retrofit;
+    private static final String BASE_URL = "https://marioguillermo.github.io/";
+
+    public static Retrofit getRetrofitInstance() {
+        if (retrofit == null) {
+            OkHttpClient.Builder builder = new OkHttpClient.Builder();
+            HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+            interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+            builder.addInterceptor(interceptor);
+            retrofit = new retrofit2.Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .client(builder.build())
+                    .build();
+        }
+        return retrofit;
+    }
+}
+
+
+
+///////////////////////// Api /////////////////////////
+
+
+package com.example.bookcatalog.data;
+
+import com.example.bookcatalog.domain.Book;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.http.GET;
+
+public interface Api {
+
+    @GET("simple-api/books.json")
+    Call<List<Book>> getBooks();
+}
+
+
+///////////////////////// Repository /////////////////////////
+
+
+package com.example.bookcatalog.data;
+
+import com.example.bookcatalog.domain.Book;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class BooksRepository {
+
+    private Api api;
+
+    public BooksRepository(Api api) {
+        this.api = api;
+    }
+
+    public void getBooks(BooksCallback callback) {
+        Call<List<Book>> call = api.getBooks();
+        ((Call) call).enqueue(new Callback<List<Book>>() {
+            @Override
+            public void onResponse(Call<List<Book>> call, Response<List<Book>> response) {
+                if (response.isSuccessful()) {
+                    callback.onSuccess(response.body());
+                } else {
+                    callback.onError("Hubo un error!");
+                }
+            }
+            @Override
+            public void onFailure(Call<List<Book>> call, Throwable t) {
+                callback.onError("Hubo un error!");
+            }
+        });
+    }
+
+
+}
+
+
+
+///////////////////////// xml del item del RecyclerView /////////////////////////
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:orientation="horizontal"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+
+    <ImageView
+        android:id="@+id/ivCover"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_prueba"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/label_book" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"
+            android:textSize="18sp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/label_title"/>
+
+        <TextView
+            android:id="@+id/tvAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/label_author"/>
+
+        <TextView
+            android:id="@+id/tvEditorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/label_editorial"/>
+
+        <TextView
+            android:id="@+id/tvPages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginBottom="5dp"
+            android:textSize="18sp"
+            android:text="@string/label_pages"/>
+
+        <ImageView
+            android:id="@+id/ivBestSeller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            android:src="@drawable/ic_bestseller"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
+///////////////////////// ViewHolder /////////////////////////
+
+package com.example.bookcatalog.UI;
+
+import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+import com.example.bookcatalog.R;
+import com.example.bookcatalog.domain.Book;
+
+class BooksViewHolder extends RecyclerView.ViewHolder {
+
+    com.example.bookcatalog.databinding.ItemBookBinding itemBookBinding;
+
+
+    public BooksViewHolder(com.example.bookcatalog.databinding.ItemBookBinding binding) {
+        super(binding.getRoot());
+        itemBookBinding = binding;
+    }
+
+
+    public void decorateWith(Book model) {
+        Glide.with(itemView.getContext()).load(model.url).into(itemBookBinding.ivCover);
+        itemBookBinding.tvTitle.setText(model.name);
+        itemBookBinding.tvEditorial.setText(itemView.getContext().getString(R.string.label_editorial, model.publishingHouse));
+        itemBookBinding.tvAuthor.setText(itemView.getContext().getString(R.string.label_author, model.author));
+        itemBookBinding.tvPages.setText(itemView.getContext().getString(R.string.label_pages, model.pages));
+
+        if (model.bestSeller){
+            itemBookBinding.ivBestSeller.setVisibility(View.VISIBLE);
+        }
+        else {
+            itemBookBinding.ivBestSeller.setVisibility(View.INVISIBLE);
+        }
+    }
+
+
+
+}
+
+
+
+///////////////////////// Adapter /////////////////////////
+
+package com.example.bookcatalog.UI;
+
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.bookcatalog.databinding.ItemBookBinding;
+import com.example.bookcatalog.domain.Book;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BooksAdapter extends RecyclerView.Adapter<BooksViewHolder> {
+
+    private List<Book> items = new ArrayList<>();
+
+    @NonNull
+    @Override
+    public BooksViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new BooksViewHolder(ItemBookBinding.inflate(LayoutInflater.from(parent.getContext())));
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull BooksViewHolder holder, int position) {
+        holder.decorateWith(items.get(position));
+    }
+
+    @Override
+    public int getItemCount() {
+        return items.size();
+    }
+
+    public void setItems(List<Book> newItems) {
+        this.items = newItems;
+        notifyDataSetChanged();
+    }
+
+
+}
+
+
+
+///////////////////////// activity_main /////////////////////////
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:gravity="center"
+    android:paddingTop="10dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_listaLibros"
+        android:textSize="26sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20sp">
+
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_book" />
+
+</LinearLayout>
+
+
+
+///////////////////////// MainActivity /////////////////////////
+
+
+package com.example.bookcatalog.UI;
+
+import android.os.Bundle;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
+import com.example.bookcatalog.data.Api;
+import com.example.bookcatalog.data.BooksCallback;
+import com.example.bookcatalog.data.BooksRepository;
+import com.example.bookcatalog.data.RetrofitInstance;
+import com.example.bookcatalog.databinding.ActivityMainBinding;
+import com.example.bookcatalog.domain.Book;
+
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity {
+
+    ActivityMainBinding binding;
+    BooksAdapter adapter;
+
+    BooksRepository booksRepository = new BooksRepository(RetrofitInstance.getRetrofitInstance().create(Api.class));
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        adapter = new BooksAdapter();
+        binding.recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        binding.recyclerView.setAdapter(adapter);
+
+        booksRepository.getBooks(new BooksCallback() {
+            @Override
+            public void onSuccess(List<Book> list) {
+                adapter.setItems(list);
+            }
+
+            @Override
+            public void onError(String errorMessage) {
+                Toast.makeText(MainActivity.this, errorMessage, Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+}
