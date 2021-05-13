@@ -2,12 +2,11 @@ package com.example.pokedex.domain;
 
 public class PokemonDetail {
 
-    private String name;
-    private String base_experience;
-    private int height;
-    private int id;
-    private int weight;
-    private String url;
+    public String base_experience;
+    public int height;
+    public int id;
+    public int weight;
+    public String url;
 
     public String getPokemonId(){
         return url

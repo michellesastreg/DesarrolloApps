@@ -13,12 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pokedex">
         <activity android:name=".UI.MainActivity">
-            <intent-filter>
+        <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".UI.DetailActivity">
+        </activity>
+
+        <activity android:name=".data.PokeDetailRepository">
+        </activity>
+
     </application>
 
 </manifest>
