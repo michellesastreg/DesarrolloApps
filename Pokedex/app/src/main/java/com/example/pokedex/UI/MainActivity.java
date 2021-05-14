@@ -5,28 +5,25 @@ import androidx.recyclerview.widget.GridLayoutManager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.pokedex.R;
 import com.example.pokedex.data.Api;
-import com.example.pokedex.data.PokeDetailRepository;
 import com.example.pokedex.data.PokemonListener;
 import com.example.pokedex.data.PokemonsCallback;
 import com.example.pokedex.data.PokemonsRepository;
 import com.example.pokedex.data.RetrofitInstance;
 import com.example.pokedex.databinding.ActivityMainBinding;
 import com.example.pokedex.domain.Pokemon;
-import com.example.pokedex.domain.PokemonDetail;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
     PokemonAdapter adapter;
     String idd;
-
 
 
     @Override
@@ -42,13 +39,13 @@ public class MainActivity extends AppCompatActivity {
         adapter.listener = new PokemonListener() {
             @Override
             public void onPokemonClicked(String id) {
-                idd= id;
-                Intent intent = new Intent(MainActivity.this, PokeDetailRepository.class);
-                intent.putExtra("id", idd);
+                Toast.makeText(MainActivity.this, id, Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                intent.putExtra("displayedId", id);
                 startActivity(intent);
-                finish();
             }
         };
+
 
 
         pokemonsRepository.getPokemons(new PokemonsCallback() {
