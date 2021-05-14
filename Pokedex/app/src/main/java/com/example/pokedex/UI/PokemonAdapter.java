@@ -11,20 +11,19 @@ import com.example.pokedex.databinding.ItemPokemonBinding;
 import com.example.pokedex.domain.Pokemon;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class PokemonAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
+public class PokemonAdapter extends RecyclerView.Adapter<PokemonsViewHolder> {
     private ArrayList<Pokemon> items = new ArrayList<>();
     public PokemonListener listener;
 
     @NonNull
     @Override
-    public PokemonViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new PokemonViewHolder(ItemPokemonBinding.inflate(LayoutInflater.from(parent.getContext())));
+    public PokemonsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new PokemonsViewHolder(ItemPokemonBinding.inflate(LayoutInflater.from(parent.getContext())));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PokemonViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull PokemonsViewHolder holder, int position) {
         holder.decorateWith(items.get(position));
         holder.itemView.setOnClickListener(view -> listener.onPokemonClicked(items.get(position).getPokemonId()));
     }

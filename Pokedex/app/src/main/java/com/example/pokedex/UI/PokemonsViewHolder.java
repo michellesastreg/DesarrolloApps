@@ -7,11 +7,11 @@ import com.bumptech.glide.Glide;
 import com.example.pokedex.databinding.ItemPokemonBinding;
 import com.example.pokedex.domain.Pokemon;
 
-public class PokemonViewHolder extends RecyclerView.ViewHolder {
+public class PokemonsViewHolder extends RecyclerView.ViewHolder {
 
     ItemPokemonBinding itemPokemonBinding;
 
-    public PokemonViewHolder(@NonNull ItemPokemonBinding binding) {
+    public PokemonsViewHolder(@NonNull ItemPokemonBinding binding) {
         super(binding.getRoot());
         itemPokemonBinding = binding;
     }

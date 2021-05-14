@@ -27,13 +27,8 @@ public class RetrofitInstance {
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(builder.build())
                     .build();
-            getData();
         }
         return retrofit;
     }
 
-    private static void getData() {
-            Api service = retrofit.create(Api.class);
-            Call<Wrapper> wrapperCall = service.getPokemons();
-    }
 }

@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <ImageButton
-        android:id="@+id/button3"
+        android:id="@+id/bnBack"
         android:layout_width="100dp"
         android:layout_height="0dp"
         android:layout_gravity="start"
