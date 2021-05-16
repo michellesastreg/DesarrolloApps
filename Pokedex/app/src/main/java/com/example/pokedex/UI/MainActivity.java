@@ -5,8 +5,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.pokedex.data.Api;
@@ -16,6 +15,7 @@ import com.example.pokedex.data.PokemonsRepository;
 import com.example.pokedex.data.RetrofitInstance;
 import com.example.pokedex.databinding.ActivityMainBinding;
 import com.example.pokedex.domain.Pokemon;
+import com.example.pokedex.domain.PokemonDetail;
 
 import java.util.ArrayList;
 
@@ -23,8 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
     PokemonAdapter adapter;
-    String idd;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         setSupportActionBar(binding.toolbar);
         adapter = new PokemonAdapter();
+
         binding.recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
         binding.recyclerView.setAdapter(adapter);
 
@@ -42,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, id, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
                 intent.putExtra("displayedId", id);
+                Log.d("displayedIdMAIN", id);
                 startActivity(intent);
             }
         };

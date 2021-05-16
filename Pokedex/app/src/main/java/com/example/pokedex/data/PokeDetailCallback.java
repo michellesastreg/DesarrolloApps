@@ -6,7 +6,8 @@ import java.util.List;
 
 public interface PokeDetailCallback {
 
-    void onSuccess(List<PokemonDetail> list);
+    void onSuccess(PokemonDetail pokemonDetail);
 
     void onError(String errorMessage);
+
 }
