@@ -4,12 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.bumptech.glide.Glide;
 import com.example.pokedex.R;
@@ -18,20 +16,16 @@ import com.example.pokedex.data.PokeDetailCallback;
 import com.example.pokedex.data.PokeDetailRepository;
 import com.example.pokedex.data.RetrofitInstance;
 import com.example.pokedex.databinding.ActivityDetailBinding;
+import com.example.pokedex.domain.Pokemon;
 import com.example.pokedex.domain.PokemonDetail;
 
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import java.util.ArrayList;
 
 public class DetailActivity extends AppCompatActivity {
 
     ActivityDetailBinding binding;
     ImageButton button;
 
-    PokemonDetail detail;
     public String pokemonId;
 
 
@@ -59,20 +53,27 @@ public class DetailActivity extends AppCompatActivity {
         pokeDetailRepository.getPokeDetails(new PokeDetailCallback() {
 
             @Override
-            public void onSuccess(PokemonDetail pokemonDetail) {
-                binding.tvNombre.setText(detail.name);
-                binding.tvExperiencia.setText(detail.base_experience);
-                binding.tvPeso.setText(detail.weight);
-                binding.tvAltura.setText(detail.height);
-                binding.tvId.setText(detail.id);
+            public void onSuccess(PokemonDetail detail) {
+                Glide.with(DetailActivity.this)
+                        .load(detail.getImageUrl())
+                        .into(binding.ivPokemon);
 
+                binding.tvNombre.setText(detail.name);
+                binding.tvAltura.setText(
+                        getString(R.string.label_height, detail.height));
+                binding.tvPeso.setText(
+                        getString(R.string.label_weight, detail.weight));
+                binding.tvExperiencia.setText(
+                        getString(R.string.label_xp, detail.base_experience));
+                binding.tvId.setText(
+                        getString(R.string.label_id, detail.id));
             }
 
             @Override
             public void onError(String errorMessage) {
                 Toast.makeText(DetailActivity.this, errorMessage, Toast.LENGTH_LONG).show();
             }
-        });
+        }, pokemonId);
 
     }
 

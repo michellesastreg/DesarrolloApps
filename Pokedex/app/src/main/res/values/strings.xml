@@ -1,4 +1,12 @@
 <resources>
+    <string name="replaceableString">%1$d</string>
+
     <string name="app_name">Pokedex</string>
     <string name="label_pokemonName">Nombre Pokemon</string>
+    <string name="label_xp">XP: %1$d</string>
+    <string name="label_weight">Peso: %1$d</string>
+    <string name="label_height">Altura: %1$d</string>
+    <string name="label_name">Nombre</string>
+    <string name="label_id">ID: %1$d </string>
+    <string name="label_addFav">Agregar a Favoritos</string>
 </resources>

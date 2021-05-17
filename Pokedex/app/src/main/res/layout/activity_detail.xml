@@ -33,8 +33,8 @@
             android:layout_marginTop="5dp"
             android:fontFamily="@font/bungee_shade"
             android:gravity="center"
-            android:text="Nombre"
-            android:textSize="40dp" />
+            android:text="@string/label_name"
+            android:textSize="40sp" />
 
 
         <LinearLayout
@@ -64,7 +64,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/bungee"
-                    android:text="id"
+                    android:text="@string/label_id"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -83,7 +83,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/bungee"
-                    android:text="XP"
+                    android:text="@string/label_xp"
                     android:textSize="20sp" />
 
 
@@ -94,7 +94,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/bungee"
-                    android:text="Peso"
+                    android:text="@string/label_weight"
                     android:textSize="20sp" />
 
                 <TextView
@@ -104,7 +104,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/bungee"
-                    android:text="Altura"
+                    android:text="@string/label_height"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -119,7 +119,7 @@
         android:layout_margin="30dp"
         android:layout_weight="1"
         android:backgroundTint="#8F0000"
-        android:text="Agregar a Favoritos"
+        android:text="@string/label_addFav"
         app:iconTint="#FFFFFF" />
 
 
