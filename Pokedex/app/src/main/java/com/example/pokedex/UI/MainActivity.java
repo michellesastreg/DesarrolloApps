@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         adapter.listener = new PokemonListener() {
             @Override
             public void onPokemonClicked(String id) {
-                Toast.makeText(MainActivity.this, id, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
                 intent.putExtra("displayedId", id);
                 Log.d("displayedIdMAIN", id);
