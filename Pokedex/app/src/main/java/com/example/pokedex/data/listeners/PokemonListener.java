@@ -1,6 +1,4 @@
-package com.example.pokedex.data;
-
-import com.example.pokedex.domain.Pokemon;
+package com.example.pokedex.data.listeners;
 
 public interface PokemonListener {
     void onPokemonClicked(String id);

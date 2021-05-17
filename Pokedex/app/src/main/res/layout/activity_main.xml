@@ -17,13 +17,13 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/sortButton"
+        app:layout_constraintBottom_toTopOf="@id/bnSortFav"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         tools:itemCount="10"
         tools:listitem="@layout/item_pokemon" />
 
     <Button
-        android:id="@+id/sortButton"
+        android:id="@+id/bnSortFav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"

@@ -1,23 +1,20 @@
-package com.example.pokedex.UI;
+package com.example.pokedex.UI.adapters;
 
-import android.content.Intent;
-import android.provider.SyncStateContract;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.pokedex.R;
-import com.example.pokedex.data.PokemonListener;
+import com.example.pokedex.UI.viewholders.PokemonsViewHolder;
+import com.example.pokedex.data.listeners.PokemonListener;
 import com.example.pokedex.databinding.ItemPokemonBinding;
-import com.example.pokedex.domain.Pokemon;
+import com.example.pokedex.domain.Pokemons;
 
 import java.util.ArrayList;
 
 public class PokemonAdapter extends RecyclerView.Adapter<PokemonsViewHolder> {
-    private ArrayList<Pokemon> items = new ArrayList<>();
+    private ArrayList<Pokemons> items = new ArrayList<>();
     public PokemonListener listener;
 
     @NonNull
@@ -37,7 +34,7 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonsViewHolder> {
         return items.size();
     }
 
-    public void setItems(ArrayList<Pokemon> newItems) {
+    public void setItems(ArrayList<Pokemons> newItems) {
         this.items = newItems;
         notifyDataSetChanged();
     }

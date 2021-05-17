@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -15,16 +16,29 @@ import com.example.pokedex.data.api.ApiPokeDetail;
 import com.example.pokedex.data.callback.PokeDetailCallback;
 import com.example.pokedex.data.repositories.PokeDetailRepository;
 import com.example.pokedex.data.RetrofitInstance;
+import com.example.pokedex.data.repositories.PokemonsRepository;
 import com.example.pokedex.databinding.ActivityDetailBinding;
 import com.example.pokedex.domain.PokemonDetail;
+import com.example.pokedex.domain.Pokemons;
 
 public class DetailActivity extends AppCompatActivity {
 
     ActivityDetailBinding binding;
-    ImageButton button;
+    ImageButton backButton;
+    Button addFavButton;
+    PokemonsRepository pokemonsRepository;
 
     public String pokemonId;
 
+    public Pokemons getPokemon() {
+        return pokemon;
+    }
+
+    public void setPokemon(Pokemons pokemon) {
+        this.pokemon = pokemon;
+    }
+
+    Pokemons pokemon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,14 +51,23 @@ public class DetailActivity extends AppCompatActivity {
         Log.d("displayedIdDetail", pokemonId);
 
 
-        button = findViewById(R.id.bnBack);
-        button.setOnClickListener(new View.OnClickListener() {
+        backButton = findViewById(R.id.bnBack);
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(DetailActivity.this, MainActivity.class));
             }
         });
 
+
+        addFavButton = findViewById(R.id.bnAddFav);
+        addFavButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pokemonsRepository.addPokemonToFavorite(/*AQUÍ VA EL POKEMON .. DE DONDE LO SACO????*/);
+                Toast.makeText(DetailActivity.this, pokemonId, Toast.LENGTH_LONG).show();
+            }
+        });
 
 
         pokeDetailRepository.getPokeDetails(new PokeDetailCallback() {

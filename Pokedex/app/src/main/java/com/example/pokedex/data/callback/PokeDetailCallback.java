@@ -1,10 +1,6 @@
-package com.example.pokedex.data;
+package com.example.pokedex.data.callback;
 
-import com.example.pokedex.domain.Pokemon;
 import com.example.pokedex.domain.PokemonDetail;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public interface PokeDetailCallback {
 

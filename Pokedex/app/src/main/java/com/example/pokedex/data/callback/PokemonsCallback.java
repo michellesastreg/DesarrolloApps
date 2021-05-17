@@ -1,13 +1,15 @@
-package com.example.pokedex.data;
+package com.example.pokedex.data.callback;
 
-import com.example.pokedex.domain.Pokemon;
+import com.example.pokedex.domain.Pokemons;
 
 import java.util.ArrayList;
 
 public interface PokemonsCallback {
 
-    void onSuccess(ArrayList<Pokemon> list);
+    void onSuccess(ArrayList<Pokemons> list);
 
     void onError(String errorMessage);
+
+    void onDataBaseResponse(Pokemons pokemon);
 }
 

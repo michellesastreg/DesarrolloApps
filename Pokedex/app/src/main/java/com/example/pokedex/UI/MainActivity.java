@@ -9,8 +9,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.pokedex.R;
 import com.example.pokedex.UI.adapters.PokemonAdapter;
 import com.example.pokedex.data.api.Api;
 import com.example.pokedex.data.database.DataBaseInstance;
@@ -32,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     PokemonAdapter adapter;
     ExecutorService executorService = Executors.newFixedThreadPool(4);
     Handler mainThreadHandler = HandlerCompat.createAsync(Looper.getMainLooper());
-    PokemonsRepository moviesRepository;
+    Button sortFav;
 
 
     @Override
@@ -62,6 +65,28 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         };
+
+        sortFav = findViewById(R.id.bnSortFav);
+        sortFav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pokemonsRepository.getFavoritePokemons(new PokemonsCallback() {
+                    @Override
+                    public void onSuccess(ArrayList<Pokemons> list) {
+                        adapter.setItems(list);
+                    }
+
+                    @Override
+                    public void onError(String errorMessage) {
+                        Toast.makeText(MainActivity.this, errorMessage, Toast.LENGTH_LONG).show();
+                    }
+
+                    @Override
+                    public void onDataBaseResponse(Pokemons pokemon) {
+                    }
+                });
+            }
+        });
 
 
 

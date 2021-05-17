@@ -1,5 +1,7 @@
-package com.example.pokedex.data;
+package com.example.pokedex.data.repositories;
 
+import com.example.pokedex.data.callback.PokeDetailCallback;
+import com.example.pokedex.data.api.ApiPokeDetail;
 import com.example.pokedex.domain.PokemonDetail;
 
 import retrofit2.Call;

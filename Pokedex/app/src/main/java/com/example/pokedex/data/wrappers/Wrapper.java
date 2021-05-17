@@ -1,21 +1,19 @@
-package com.example.pokedex.data;
+package com.example.pokedex.data.wrappers;
 
-import com.example.pokedex.domain.Pokemon;
+import com.example.pokedex.domain.Pokemons;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Wrapper {
 
-    private ArrayList<Pokemon> results;
+    private ArrayList<Pokemons> results;
 
-    public ArrayList<Pokemon> getResults(){
+    public ArrayList<Pokemons> getResults(){
         return results;
     }
 
 
-    public void setResults(ArrayList<Pokemon> results){
+    public void setResults(ArrayList<Pokemons> results){
     this.results = results;
     }
 }

@@ -1,18 +1,18 @@
-package com.example.pokedex.data;
+package com.example.pokedex.data.database;
 
 import android.content.Context;
 
 import androidx.room.Room;
 
-public class DatabaseInstance {
+public class DataBaseInstance {
 
-    private static FavoriteDatabase database;
+    private static FavDataBase database;
 
-    public static FavoriteDatabase getRetrofitInstance(Context context) {
+    public static FavDataBase getRetrofitInstance(Context context) {
         if (database == null) {
             database = Room.databaseBuilder(
                     context,
-                    FavoriteDatabase.class,
+                    FavDataBase.class,
                     "database-name"
             ).build();
         }
