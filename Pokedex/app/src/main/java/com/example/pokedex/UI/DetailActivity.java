@@ -11,15 +11,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.example.pokedex.R;
-import com.example.pokedex.data.ApiPokeDetail;
-import com.example.pokedex.data.PokeDetailCallback;
-import com.example.pokedex.data.PokeDetailRepository;
+import com.example.pokedex.data.api.ApiPokeDetail;
+import com.example.pokedex.data.callback.PokeDetailCallback;
+import com.example.pokedex.data.repositories.PokeDetailRepository;
 import com.example.pokedex.data.RetrofitInstance;
 import com.example.pokedex.databinding.ActivityDetailBinding;
-import com.example.pokedex.domain.Pokemon;
 import com.example.pokedex.domain.PokemonDetail;
-
-import java.util.ArrayList;
 
 public class DetailActivity extends AppCompatActivity {
 

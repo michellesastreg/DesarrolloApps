@@ -1,4 +1,4 @@
-package com.example.pokedex.domain;
+package com.example.pokedex.domain.models;
 
 public class PokemonDetail {
 

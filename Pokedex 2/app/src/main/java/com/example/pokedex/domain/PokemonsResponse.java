@@ -1,9 +1,15 @@
 package com.example.pokedex.domain;
 
-public class Pokemon {
+import com.example.pokedex.data.favorites.FavoriteList;
+
+import java.util.ArrayList;
+
+public class PokemonsResponse {
 
     public String name;
     public String url;
+    private ArrayList<FavoriteList> results;
+
 
     public String getPokemonId(){
         return url
@@ -33,5 +39,14 @@ public class Pokemon {
     public void setUrl(){
         this.name = name;
     }
+
+    public ArrayList<FavoriteList> getResults() {
+        return results;
+    }
+
+    public void setResults(ArrayList<FavoriteList> results) {
+        this.results = results;
+    }
+
 
 }
