@@ -1,14 +1,8 @@
 package com.example.pokedex.domain;
 
-import androidx.annotation.NonNull;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
 
-@Entity
 public class Pokemons {
 
-    @PrimaryKey
-    @NonNull
     public String name;
     public String url;
 

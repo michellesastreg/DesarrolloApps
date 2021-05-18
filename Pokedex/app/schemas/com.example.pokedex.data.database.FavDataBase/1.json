@@ -2,17 +2,17 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "8e3d1f8c1b914d9ef85377a76503e3b2",
+    "identityHash": "959806e92196301c68723b48c6ae66a9",
     "entities": [
       {
         "tableName": "Pokemons",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name` TEXT NOT NULL, `url` TEXT, PRIMARY KEY(`name`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name` TEXT, `url` TEXT)",
         "fields": [
           {
             "fieldPath": "name",
             "columnName": "name",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "url",
@@ -22,9 +22,7 @@
           }
         ],
         "primaryKey": {
-          "columnNames": [
-            "name"
-          ],
+          "columnNames": [],
           "autoGenerate": false
         },
         "indices": [],
@@ -34,7 +32,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8e3d1f8c1b914d9ef85377a76503e3b2')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '959806e92196301c68723b48c6ae66a9')"
     ]
   }
 }

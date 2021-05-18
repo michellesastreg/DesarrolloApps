@@ -2,11 +2,16 @@ package com.example.pokedex.data.callback;
 
 import com.example.pokedex.domain.PokemonDetail;
 
-public interface PokeDetailCallback {
+import java.util.ArrayList;
+import java.util.List;
 
-    void onSuccess(PokemonDetail detail);
+
+public interface FavoritesCallback {
+
+    void onSuccess(List<PokemonDetail> list);
 
     void onError(String errorMessage);
 
     void onDataBaseResponse(PokemonDetail pokemon);
+
 }

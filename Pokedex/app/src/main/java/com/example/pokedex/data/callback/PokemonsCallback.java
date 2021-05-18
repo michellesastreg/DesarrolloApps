@@ -10,6 +10,5 @@ public interface PokemonsCallback {
 
     void onError(String errorMessage);
 
-    void onDataBaseResponse(Pokemons pokemon);
 }
 

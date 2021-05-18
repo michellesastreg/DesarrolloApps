@@ -9,4 +9,6 @@
     <string name="label_name">Nombre</string>
     <string name="label_id">ID: %1$d </string>
     <string name="label_addFav">Agregar a Favoritos</string>
+    <string name="label_addedPokemon">Se agregó a %1$d a tus favoritos </string>
+
 </resources>
